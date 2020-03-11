@@ -25,9 +25,10 @@ In the past, mks wifi firmware was released together with mks-robin or mks-tft f
 
 ## NEWS ##
 
-* V1.0.4 *
+** V1.0.4 **
 
 1. Optimize the socket communication, realize wireless control and printing using RepetierHost/pronterface etc.
+2. Fix serval bugs.
 
 ## How to update ##
 
