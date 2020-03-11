@@ -18,3 +18,21 @@ Using the mobile APP (MKS CLOUD), users can transfer the cloud model to the SD c
 
 # Compatibility with esp3d ?
 Esp3d is a well known wifi project in 3d printing , too. If you are using MKS Robin series or MKS TFT series, mks wifi firmware can make the transfer speed up to 100KBytes/s. If you are using other 2560 series board, Esp3d firmware is more suitable. Esp3d firmware also can runs on MKS WIFI hardware, but, the interface needs to be transferred to the AUX-1.
+
+
+# Firmware #
+In the past, mks wifi firmware was released together with mks-robin or mks-tft firmware. In order to facilitate downloading, the wifi firmware version was pulled out separately from V1.0.4.
+
+## NEWS ##
+
+* V1.0.4 *
+
+1. Optimize the socket communication, realize wireless control and printing using RepetierHost/pronterface etc.
+
+## How to update ##
+
+- Extract the zip package and you will get a file of "mkswifi.bin"
+- Copy "mkswifi.bin" to the sdcard
+- Insert sdcard to the relative board(Robin series and mks tft series)
+- Reboot the board, firmware will updated automatically
+
