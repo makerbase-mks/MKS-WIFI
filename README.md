@@ -30,7 +30,7 @@ In the past, mks wifi firmware was released together with mks-robin or mks-tft f
 
 ## How to compile ##
 1. Install the Arduino IDE at the 1.6.8 level or later. [Arduino website](https://www.arduino.cc/en/software).
-2. Download the esp8266 core for arduion. As the core we use is based on [Duet3D's versin](https://github.com/Duet3D/CoreESP8266), and have little modifation. So  using the [Esp8266 core official](https://github.com/esp8266/Arduino) may cause compile errors. Please directly download the [esp8266 core on MKS Github](https://github.com/makerbase-mks/Esp8266-Core-For-Arduino) to the arduino data path, eg, "C:\Users\xxx\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266".
+2. Download the esp8266 core for arduion. As the core we use is based on [Duet3D's version](https://github.com/Duet3D/CoreESP8266), and have little modifation. So  using the [Esp8266 core official](https://github.com/esp8266/Arduino) may cause compile errors. Please directly download the [esp8266 core on MKS Github](https://github.com/makerbase-mks/Esp8266-Core-For-Arduino) to the arduino data path, eg, "C:\Users\xxx\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266".
 3. Open Arduino IDE, open the MKS WIFI project
 4. Config the Tools menu:
  - Tools > select "Generic ESP8266 Module"
