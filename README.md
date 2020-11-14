@@ -39,8 +39,10 @@ In the past, mks wifi firmware was released together with mks-robin or mks-tft f
  other options can be default.
 5. Click the Compile button and wait it finish
 6. If you connect the wifi module to PC, you can use the upload function of Arduino to flash the firmware; if not, you can directly copy the ".bin" file to the sd card, insert to the MKS robin series or TFT series board, it can automatically update the wifi firmware.
-  ** Hint: the ".bin" file is in the temporary directory, you can find the it like "C:\Users\xxx\AppData\Local\Temp\buildxxxxxxxxxxxxxxxxxxxx.tmp", remember rename the file to "MksWifi.bin" before copy it to sdcard.
+  ** Hint: to export the "*.bin" file, you can click the Sketch > Export compiled Binary on Arduino, the ".bin" file will be exported to the project directory, remember rename the file to "MksWifi.bin" before copy it to sdcard.
 
+## About the communication between the Wifi module and Host MCU ##
+Please refer to the document:https://github.com/makerbase-mks/MKS-WIFI/blob/master/Transfer%20protocal%20%20between%20ESP%20and%20MCU.docx
 
 # Compatibility with esp3d ?
 Esp3d is a well known wifi project in 3d printing , too. If you are using MKS Robin series or MKS TFT series, mks wifi firmware can make the transfer speed up to 100KBytes/s. If you are using other 2560 series board, Esp3d firmware is more suitable. Esp3d firmware also can runs on MKS WIFI hardware, but, the interface needs to be transferred to the AUX-1.
