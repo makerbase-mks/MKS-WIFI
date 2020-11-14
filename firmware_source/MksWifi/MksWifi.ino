@@ -582,7 +582,7 @@ void setup() {
 	String macStr= WiFi.macAddress();
 	//				Serial.println(macStr);
 	
-	pinMode(SamTfrReadyPin, INPUT);
+	pinMode(McuTfrReadyPin, INPUT);
 	pinMode(EspReqTransferPin, OUTPUT);
 
 	digitalWrite(EspReqTransferPin, HIGH);
@@ -1670,7 +1670,7 @@ void do_transfer()
 			if((uart_send_length_important > 0) || (uart_send_size > 0))
 			{
 				digitalWrite(EspReqTransferPin, LOW);
-				if(digitalRead(SamTfrReadyPin) == LOW) // STM32 READY SIGNAL
+				if(digitalRead(McuTfrReadyPin) == LOW) // STM32 READY SIGNAL
 				{
 					transfer_state = TRANSFER_FRAGMENT;
 				}
@@ -1741,7 +1741,7 @@ void do_transfer()
 
 		case TRANSFER_READY:
 						
-			if(digitalRead(SamTfrReadyPin) == LOW) // STM32 READY SIGNAL
+			if(digitalRead(McuTfrReadyPin) == LOW) // STM32 READY SIGNAL
 			{
 				transfer_state = TRANSFER_FRAGMENT;
 			}
@@ -2924,7 +2924,7 @@ void handleUpload()
 
 			if(wait_tick > 20) // 2s
 			{
-				if(digitalRead(SamTfrReadyPin) == HIGH) // STM32 READY SIGNAL
+				if(digitalRead(McuTfrReadyPin) == HIGH) // STM32 READY SIGNAL
 				{
 					upload_error = true;		
 				//	Serial.println("upload_error");
