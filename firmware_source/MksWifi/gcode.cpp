@@ -1,8 +1,8 @@
 #include <stdint.h>
 #include <string.h>
 #include <math.h>
-#include <wstring.h>
-#include <hardwareSerial.h>
+#include <WString.h>
+#include <HardwareSerial.h>
 #include <FS.h>
 #include "gcode.h"
 
@@ -317,7 +317,7 @@ void paser_cmd(uint8_t *cmdRxBuf)
 		}
 		if(num_valid)
 		{
-			if(DecStr2Float(tempBuf, &tmpTemp) !=   0)//µ±Ç°ÎÂ¶È
+			if(DecStr2Float(tempBuf, &tmpTemp) !=   0)//ï¿½ï¿½Ç°ï¿½Â¶ï¿½
 			{
 				//if((int)tmpTemp != 0)
 				{
@@ -364,7 +364,7 @@ void paser_cmd(uint8_t *cmdRxBuf)
 				}
 				if(num_valid)
 				{
-					if(DecStr2Float(tempBuf, &tmpTemp)	 !=   0)//Ä¿±êÎÂ¶È
+					if(DecStr2Float(tempBuf, &tmpTemp)	 !=   0)//Ä¿ï¿½ï¿½ï¿½Â¶ï¿½
 					{
 						//if((int)tmpTemp != 0)
 						{
@@ -599,7 +599,3 @@ void paser_cmd(uint8_t *cmdRxBuf)
 			
 	
 }
-
-
-
-
