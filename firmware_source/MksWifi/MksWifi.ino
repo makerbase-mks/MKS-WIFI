@@ -893,20 +893,11 @@ void loop()
 						
 						if(transfer_file_flag)
 						{
-						
-							if(!verification_flag)
-							{
-								break;
-							}
-							if(gFileFifo.left() >= readSize)
-							{
-							
-								gFileFifo.push((char *)readStr, readSize);
-								transfer_frags += readSize;
-								
-								
-							}
-						
+							/* gFileFifo holds the file of the HTTP /upload in progress
+							   (the only path that sets transfer_file_flag; the M28/M110
+							   transfer over this port is disabled with #if 0).
+							   Data received on this port is not part of that file, so it
+							   is dropped instead of being pushed into gFileFifo. */
 						}
 						else
 						{
